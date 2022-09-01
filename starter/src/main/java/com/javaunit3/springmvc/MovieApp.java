@@ -10,7 +10,7 @@ public class MovieApp {
         AnnotationConfigApplicationContext applicationContext  = new AnnotationConfigApplicationContext(MovieApp.class);
         //  retrieve the bean from spring container
         BestMovieService bestMovieService =applicationContext .getBean("bestMovieService", BestMovieService.class);
-
+        // call method getBestMovie() on bean
         Movie bestMovie = bestMovieService.getBestMovie();
 
         System.out.println("Title: " + bestMovie.getTitle());
